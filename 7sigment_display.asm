@@ -1,4 +1,4 @@
-.equ delaym = 250
+.equ delaym = 253
 .org 0
 
 rjmp main
@@ -24,8 +24,6 @@ button_check:
     breq reset_counter
     rjmp segment_select
 
-
-
 reset_counter:
     ldi r19, 0
     rjmp delay
@@ -42,7 +40,6 @@ segment_select:
     cpi r19, 5
     breq name5
     rjmp button_check
-
 
 name1:
     ldi r23, 0b1110111
@@ -68,9 +65,6 @@ name5:
     ldi r27, 0b1110111
     out PORTB, r27
     rjmp delay
- 
- 
-
 
 delay:
     ldi r20, delaym
