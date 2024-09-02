@@ -1,6 +1,5 @@
 .equ delaym = 253
 .org 0
-
 rjmp main
 
 main:
